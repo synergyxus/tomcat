@@ -32,7 +32,7 @@ pipeline {
             steps {
                 script {
                     image_name = "synergyx/demo-tomcat-app:${tag}"
-                    sh "kubectl set image deployment/demo-tomcat-app demo-nodejs-app=${image_name}"
+                    sh "kubectl set image deployment/demo-tomcat-app demo-tomcat-app=${image_name}"
                     sh "kubectl rollout status deployment/demo-tomcat-app"
                 }
             }
