@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('https://index.docker.io/v1/', 'docker-hub-creds') {
-                        image = docker.build("synergyx/demo-nodejs-app")
+                        image = docker.build("synergyx/demo-tomcat-app")
                     }
                 }
             }
